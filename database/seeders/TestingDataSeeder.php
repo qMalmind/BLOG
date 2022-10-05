@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\ArticleUser;
+use App\Models\Report;
+use App\Models\Rule;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -24,5 +26,7 @@ class TestingDataSeeder extends Seeder
         for($j=0; $j < $this->numbers_articles;$j++) {
             Article::factory()->has(User::factory()->count(random_int(1, 2)))->create();
         }
+//        Тут я пока хз как писать полиморфную связь в фабрике, поэтому потом сделаю, либо не сделаю
+//        Report::factory()->hasUsers(3)->create()->has(Rule::class)->count(2)->create();
     }
 }

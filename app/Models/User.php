@@ -48,4 +48,8 @@ class User extends Authenticatable
     public function articles(){
         return $this->belongsToMany(Article::class);
     }
+
+    public function reports(){
+        return $this->morphMany(Report::class, 'reportable');
+    }
 }

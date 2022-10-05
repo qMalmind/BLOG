@@ -13,4 +13,8 @@ class Article extends Model
     public function users(){
         return $this->belongsToMany(User::class);
     }
+
+    public function reports(){
+        return $this->morphMany(Report::class, 'reportable');
+    }
 }

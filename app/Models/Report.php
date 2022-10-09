@@ -9,7 +9,7 @@ class Report extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['description'];
+    protected $fillable = ['description', 'reportable_id', 'reportable_type'];
 
     public function reportable(){
         return $this->morphTo();
@@ -17,9 +17,5 @@ class Report extends Model
 
     public function rules(){
         return $this->belongsToMany(Report::class);
-    }
-
-    public function users(){
-        return $this->belongsTo(User::class);
     }
 }

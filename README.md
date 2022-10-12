@@ -23,15 +23,18 @@
 ## <a name='deploy-local'> Как развернуть проект на локальном компьюетере </a>
 ###Клонировать репозиторий к себе на компьютер
 > git clone git@github.com:qMalmind/BLOG.git <br>
+
 ###Устоновка зависимостей через composer
-> composer install
+> composer install <br>
+
 ###Проведение миграций 
-> php artisan migrate
+> php artisan migrate <br>
+
 ### Запуск сидов
 #### Необходимые данные для работы проекта
-> php artisan db:seed --class=DatabaseSeeder
+> php artisan db:seed --class=DatabaseSeeder <br>
 #### Заполнение бд тестовыми данными
-> php artisan db:seed --class=TestingDataSeeder
+> php artisan db:seed --class=TestingDataSeeder <br>
 
 ## <a name='deploy-prod'> Как развернуть на сервере </a>
 В данный момент проект в стадии разработке и не готов к продакшену

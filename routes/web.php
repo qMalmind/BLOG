@@ -14,3 +14,7 @@ use \App\Http\Controllers\IndexController;
 */
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
+
+Route::get('/ui', function (){
+    return view("UI.ui");
+})->name('index');
